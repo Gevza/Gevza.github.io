@@ -1,15 +1,17 @@
 :root{
-    --grisFondo: #3F3F3F;
+    --grisFondo: #3f3f3f;
+    --grisClaro: #E9ECF0;
     --blancoLetra: #E7E7E7;
     --lilaLogo: #7A63FF;
+    --lilaFocus: #9380fa;
 }
 
 .marginRight0px{
     margin-right: 0px;
 }
 
-.paddingRight{
-    padding-right: 140px;
+.paddingLeft{
+    padding-left: 140px;
 }
 
 .headerNavigation{
@@ -19,38 +21,41 @@
 .itemsMenu{
     color: var(--blancoLetra);
     font-family: 'Montserrat';
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
-    /*font-size: 20px;*/
 }
 
 .contenedorImagen{
     position: relative;
-/*    display: inline-block;*/
     text-align: left;
     margin-top: 88px;
 }
 
 .centrado{
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 5%;
-    /*transform: translate(-50%, -50%);*/
 }
 
 .imgInicio{
     width: 100%;
     height: auto;
-    
 }
 
+a.myanchor:before {
+    display: block;
+    content: " ";
+    margin-top: -88px;
+    height: 60px;
+    visibility: hidden;
+}
 
-a.myanchor:before {       
-    display: block;       
-    content: " ";       
-    margin-top: -88px;       
-    height: 60px;       
-    visibility: hidden; }
+.anchorContacto{
+    display: block;
+    content: " ";
+    height: 60px;
+    visibility: hidden;
+}
 
 .logoCabecera{
     max-width: 100px;
@@ -68,12 +73,13 @@ a.myanchor:before {
 
 .containertituloNosotros{
     margin-top: 25px;
-    justify-content: center;
-    text-align: center;
+    margin-left: 80px;
+    justify-content: left;
+    text-align: left;
 }
 
-.tituloNosotros, .tituloServicios{
-    font-size: 40px;
+.tituloLila, .tituloServicios{
+    font-size: 30px;
     font-family: 'Montserrat';
     font-weight: 700;
     color: var(--lilaLogo);
@@ -82,28 +88,48 @@ a.myanchor:before {
 
 .tituloServicios{
     color: var(--blancoLetra);
+    margin-top: 15px;
 }
 
-.containerCuerpo{
+.margintop30{
+    margin-top: 20px;
+}
+
+
+
+.containerCuerpo, .containerImagenesServicios{
     justify-content: left;
     text-align: left;
     align-items: center;
-    
 }
 
-.textoCuerpo, .textoCuerpo2, .textoCuerpoServicios, .textoCuerpoServicios2 {
-    font-size: 25px;
+.containerImagenesServicios{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.containerHeaderNav{
+    justify-content: right;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.textoCuerpo, .textoCuerpo2, .textoCuerpoServicios {
+    font-size: 20px;
     font-family: 'Montserrat';
     font-weight: 700;
     color: var(--lilaLogo);
     line-height: 40px;
+    margin-left: 25px;
 }
 
-.textoCuerpoServicios, .textoCuerpoServicios2{
+.textoCuerpoServicios{
     color: var(--blancoLetra);
+    font-size: 18px;
 }
 
-.textoCuerpo2, .textoCuerpoServicios2{
+.textoCuerpo2{
     font-weight: 400;
 }
 
@@ -114,16 +140,67 @@ a.myanchor:before {
 }
 
 .imgBuildSW{
-    /*margin-left: 150px;*/
     max-width: 500px;
     width: 100%;
     height: auto;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .container-violet{
     background-color: var(--lilaLogo);
+    padding-bottom: 35px;
 }
+
+
+.container-lightGray{
+   background-color: var(--grisClaro);
+}
+
+.containerContacto{
+    margin-top: 80px;
+    padding-bottom: 80px;
+}
+
+.containerEnviar{
+    text-align: right;
+}
+
+.campos {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--lilaLogo);
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10%;
+    color: var(--lilaLogo);
+}
+
+.campos::placeholder{
+    font-size: 18PX;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: var(--lilaFocus);
+}
+
+.campos:focus{
+    outline: none;
+}
+
+.btn-enviar{
+    width: 150px;
+    height: 50px;
+    background-color: var(--lilaLogo);
+    border: var(--lilaLogo);
+    color: var(--blancoLetra);
+}
+
+.btn-enviar:hover{
+    background-color: var(--lilaFocus);
+    color: var(--blancoLetra);
+}
+
+
+
 
 .container-gray{
     background-color: var(--grisFondo);
@@ -136,7 +213,7 @@ a.myanchor:before {
     margin-left: 30px;
 }
 
-.derechosReservados{
+.derechosReservados, .datosContacto, .navegacionFooter{
     text-decoration: none;
     font-size: 15px;
     font-family: 'Montserrat';
@@ -178,7 +255,7 @@ a.myanchor:before {
         visibility: hidden;
     }
 
-    .tituloNosotros, .tituloServicios{
+    .tituloLila, .tituloServicios{
         font-size: 20px;
     }
 
@@ -188,7 +265,7 @@ a.myanchor:before {
         height: auto;
     }
 
-    .textoCuerpo, .textoCuerpo2, .textoCuerpoServicios, .textoCuerpoServicios2{
+    .textoCuerpo, .textoCuerpo2, .textoCuerpoServicios{
         font-size: 14px;
         line-height: 20px;
     }
@@ -211,13 +288,19 @@ a.myanchor:before {
         align-items: center;
     }
 
-    .derechosReservados{
+    .derechosReservados, .datosContacto, .navegacionFooter{
         text-align: center
     }
 
-    
+    .derechosReservados{
+        font-size: 10px;
+    }
+
+    .containerEnviar{
+        text-align: center;
+    }
     
 
-  }
+}
 
 

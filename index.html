@@ -3,32 +3,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="icono.ico" />
+    <link rel="shortcut icon" href="icon.ico" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/index.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Gevza</title>
-    <style>
-
-
-    </style>
 </head>
 <body>
     <!--MENU -->
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top headerNavigation">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top nav-collapse headerNavigation">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img class="logoCabecera" src="img/gevza_logo.png" alt="Logo Gevza">
+                <img class="logoCabecera" src="img/logo.png" alt="Logo Gevza">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark paddingRight" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navegaci&oacute;n</h5>
+            <div class=" collapse navbar-collapse offcanvas navBarLateral offcanvas-end text-bg-dark" style="width: 180px;" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header containerHeaderNav">
+                    
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
+                <div class="offcanvas-body paddingLeft">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item itemsMenu">
                             <a class="nav-link active" aria-current="page" href="#nosotros">Nosotros</a>
@@ -46,10 +44,10 @@
     </nav>
     <!--Fin MENU-->
     <div class="contenedorImagen">
-        <img class="imgInicio" src="img/f3.gif" alt="No disponible">
+        <img class="imgInicio" src="img/banner.gif" alt="No disponible">
         <div class="centrado"> 
             <p class="descrip-inicio">
-                ¡Desarrollos a medida para que puedas <br> hacer crecer tu empresa!
+                ¡Desarrollos a medida <br> para que puedas hacer <br> crecer tu empresa!
             </p>
         </div>
     </div>
@@ -57,7 +55,7 @@
     <!-- NOSOTROS-->
     <a class="myanchor" id="nosotros"></a>
     <div class="containertituloNosotros">
-        <p class="tituloNosotros">
+        <p class="tituloLila">
             Nosotros
         </p>
     </div>
@@ -66,7 +64,7 @@
             <div class="col-lg-5 col-sm-6">
                 <div class="containerCuerpo">
                     <p class="textoCuerpo">
-                        Nos especializamos en el analisis, <br> desarrollo e implementación de <br> soluciones tecnol&oacute;gicas adaptables  <br> para pequeñas y medianas empresas.
+                        Nos especializamos en el an&aacute;lisis, <br> desarrollo e implementaci&oacute;n de <br> soluciones tecnol&oacute;gicas adaptables  <br> para peque&ntilde;as y medianas empresas.
                     </p>
                     <p class="textoCuerpo2">
                         Acompa&ntilde;amos en el proceso de cambio <br> tecnol&oacute;gico, aceptaci&oacute;n y uso de las nuevas tecnolog&iacute;as.
@@ -90,23 +88,77 @@
         </div>
         <div class="container containerNosotros">
             <div class="row align-items-start marginRight0px">
-                <div class="col-lg-5 col-sm-6">
-                    <div class="containerCuerpo">
-                        <p class="textoCuerpoServicios">
-                            Nos especializamos en el analisis, <br> desarrollo e implementación de <br> soluciones tecnol&oacute;gicas adaptables  <br> para pequeñas y medianas empresas.
-                        </p>
-                        <p class="textoCuerpoServicios2">
-                            Acompa&ntilde;amos en el proceso de cambio <br> tecnol&oacute;gico, aceptaci&oacute;n y uso de las nuevas tecnolog&iacute;as.
-                        </p>
+                <div class="col-lg-3 col-sm-2">
+                    <p class="textoCuerpoServicios">
+                        Dise&ntilde;amos y desarrollamos tu pr&oacute;xima p&aacute;gina web para que puedas ampliar tu abanico de posibilidades en el mercado.
+                    </p>
+                    <div class="containerImagenesServicios">
+                        <img class="imgBuildSW" src="img/dev-web.png" alt="No disponible">
                     </div>
                 </div>
-                <div class="col-lg-7 col-sm-6 containerImgBuild">
-                    <img class="imgBuildSW" src="img/build-software.png" alt="No disponible">
+                <div class="col-lg-3 col-sm-2">
+                    <div class="containerImagenesServicios">
+                        <img class="imgBuildSW" src="img/dev-app.png" alt="No disponible">
+                    </div>
+                    <p class="textoCuerpoServicios">
+                        Desde una APP Mobile personalizada para tu empresa, podr&aacute;s consultar y gestionar tus operaciones.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-sm-2">
+                    <p class="textoCuerpoServicios">
+                        Con nuevas herramientas de gesti&oacute;n lograr&aacute;s aumentar la eficiencia en las operaciones diarias.
+                    </p>
+                    <div class="containerImagenesServicios">
+                        <img class="imgBuildSW" src="img/dev-desktop.png" alt="No disponible">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-2 align-items-start">
+                    <div class="containerImagenesServicios">
+                        <img class="imgBuildSW" src="img/dev-support.png" alt="No disponible">
+                    </div>
+                    <p class="textoCuerpoServicios">
+                        Siempre estamos listos para ayudarte a resolver todas las dudas que puedas tener en el camino de la transformaci&oacute;n.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
     <!-- FIN SERVICIOS-->
+
+    <!-- CONTACTO-->
+    <div class="container-lightGray">
+        <a class="anchorContacto" id="contacto"></a>
+        <div class="containertituloNosotros">
+            <p class="tituloLila margintop30">
+                Contacto
+            </p>
+        </div>
+        <div class="container containerContacto">
+            <div class="row align-items-start marginRight0px">
+                <div class="col-lg-3 col-sm-3">
+                    <div class="containerCuerpo">
+                        <input type="text" class="campos" placeholder="Nombre">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                    <div class="containerCuerpo">
+                        <input type="email" class="campos" placeholder="Email">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-5">
+                    <div class="containerCuerpo">
+                        <input type="email" class="campos" placeholder="Mensaje">
+                    </div>
+                </div>
+                <div class="col-lg-12 col-sm-12 ">
+                    <div class="containerEnviar">
+                        <input type="submit" onclick="enviarMail()" class="btn  btn-enviar" value="Enviar"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN CONTACTO-->
 
     <!-- FOOTER-->
     <div class="container-gray">
@@ -114,18 +166,18 @@
             <div class="row">
                 <div class="col-lg-2 containerLogoFooter">
                     <a href="index.html">
-                        <img class="logoFooter" src="img/gevza_logo.png" alt="No disponible">
+                        <img class="logoFooter" src="img/logo.png" alt="No disponible">
                     </a>
                 </div>
                 <div class="col-lg-4 containerImgBuildFooter">
                     <p>
-                        <a class="derechosReservados" href="#nosotros">Nosotros <br> </a>
-                        <a class="derechosReservados" href="#servicios">Servicios <br> </a>
-                        <a class="derechosReservados" href="#contacto">Contacto <br> </a>
+                        <a class="navegacionFooter" href="#nosotros">Nosotros <br> </a>
+                        <a class="navegacionFooter" href="#servicios">Servicios <br> </a>
+                        <a class="navegacionFooter" href="#contacto">Contacto <br> </a>
                     </p>
                 </div>
                 <div class="col-lg-4 containerImgBuildFooter">
-                    <p class="derechosReservados">
+                    <p class="datosContacto">
                         gevzaok@gmail.com <br>
                         11-2876-8521 <br>
                         <a href="https://www.instagram.com/gevza_/" target="_blank"> <img class="iconoFooter" src="img/instagram.png" alt="No disponible"></a>
@@ -140,7 +192,6 @@
         </div>
     </div>
     <!-- FIN FOOTER-->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>

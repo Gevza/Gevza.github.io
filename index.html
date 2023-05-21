@@ -133,6 +133,7 @@
                 Contacto
             </p>
         </div>
+        <!--
         <div class="container containerContacto">
             <div class="row align-items-start marginRight0px">
                 <div class="col-lg-3 col-sm-3">
@@ -157,6 +158,37 @@
                 </div>
             </div>
         </div>
+        -->
+        <form style="margin-bottom: 0px;" action="https://formsubmit.co/consultas@gevza.com" method="POST">
+        <div class="container containerContacto">
+            <div class="row align-items-start marginRight0px">
+                <!--<form class="align-items-start marginRight0px" action="https://formsubmit.co/consultas@gevza.com" method="POST">-->
+                <div class="col-lg-3 col-sm-3">
+                    <div class="containerCuerpo">
+                        <input type="text" class="campos" placeholder="Nombre" name="Nombre">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                    <div class="containerCuerpo">
+                        <input type="email" class="campos" placeholder="Email" name="Email">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-5">
+                    <div class="containerCuerpo">
+                        <input type="text" class="campos" placeholder="Mensaje" name="Mensaje">
+                    </div>
+                </div>
+                <div class="col-lg-12 col-sm-12 ">
+                    <div class="containerEnviar">
+                        <input type="submit" class="btn  btn-enviar" value="Enviar"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" name="_next" value="http://localhost:8080/gevza/thanks.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        </form>
     </div>
     <!-- FIN CONTACTO-->
 

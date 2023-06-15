@@ -299,6 +299,10 @@ a.myanchor:before {
     .containerEnviar{
         text-align: center;
     }
+
+    .paddingLeft{
+        padding-left: 0px;
+    }
     
 
 }
